@@ -39,6 +39,10 @@
     font-family: Raleway; 
     text-decoration: none;
   }
+
+  .spacer-mobile {
+    height: 30px;
+}
   
   .button:hover {
     color: var(--blue, #0065FC); 
@@ -92,6 +96,17 @@ p {
     background-color: #F2F2F2; 
   }
 
+
+  .container-info {
+    display: flex;
+    border: 1px solid #D9D9D9;
+    border-radius: 100%;
+    height: 24px;
+    width: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
 
   .search-text {
     color: var(--black, #000);
@@ -185,6 +200,7 @@ background: var(--blue-light, #DEEBFF);
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
     
 }
 
@@ -359,12 +375,6 @@ align-self: stretch;
 }
 /****** Activites***********/
 
-.activites-a-marseille {
-    padding: 30px;
-    border-width: 50px;
-    border-top: 35px;
-    border-bottom: 35px;
-}
 
 .activites {
     width: 32%;
@@ -377,7 +387,7 @@ align-self: stretch;
 }
 
 .activites-cards {
-    display: inline-flex;
+    display: flex;
     gap: 30px;
     align-self: stretch;
 }
@@ -532,8 +542,19 @@ footer {
    
     .navigation-container {
         display: flex;
+        
+        
     }
 
+    .button {
+        font-size: 16px;
+        width: 100%;
+        display: block;
+        padding: 8px;
+        border-bottom: 3px #F2F2F2 solid;
+    }
+
+   
 
     .button:hover {
         color: var(--blue, #0065FC); 
@@ -547,7 +568,17 @@ footer {
         align-self: center;
     }
 
+    .navigation-header {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
 
+    .navigation-header li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
   
     /* formulaire recherche */
 
@@ -558,15 +589,24 @@ footer {
         align-items: flex-start;
         gap: 35px;
         align-self: stretch;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 
     h1 {
-        font-size: 14px;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal
     }
     
     p {
-        font-size: 14px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 8px;
     }
 
     .formulaire-recherche {
@@ -584,8 +624,15 @@ footer {
 
     .search-container {
         width: 100%;
-       
+    
     }
+
+
+    .search-text {
+        border-right: 1px solid white;
+        width: 100%;
+    }
+
     .button-search {
         display: none; 
     }
@@ -599,8 +646,6 @@ footer {
         height: 49px;
         padding: 15px 16px;
         align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
         border-radius: 15px;
         border: 1px solid var(--blue, #0065FC);
         background: var(--blue, #0065FC);
@@ -633,13 +678,19 @@ footer {
         gap: 10px;
 
     }
-   
+    .filter-container p {
+        padding-top: 0;
+    }
+    .filtres-text {
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+    }
+
 
     .icon-button {
         width: 48%;
-        
-        /*font-size: 14px;*/
-
+        font-size: 14px;
         display: flex;
         height: 50px;
         padding: 4px 19px;
@@ -659,11 +710,22 @@ footer {
     .hebergements {
         width: 100%;
         order: 2;
+        background-color: white!important;
     }
 
     .hebergements-cards .card {
         flex-direction: column;
         width: 100%;
+        height: 202px;
+    }
+
+    .section-title-afficher {
+        font-size: 18px;
+    }
+
+    /*populaires*/
+    .section-title {
+        font-size: 22px;
     }
 
     .populaires {
@@ -681,6 +743,12 @@ footer {
         width: 100%;
     }
 
+    /*activites*/
+
+    .activites-a-marseille {
+        padding: 20px;
+    }
+
     .activites-cards {
         width: 100%;
         flex-direction: column;
@@ -688,7 +756,28 @@ footer {
 
     .activites-cards .card {
         width: 100%;
+        margin: 0px;
+        padding: 0px;
     }
+
+    .activites.cards .card-title {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .card-content {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .card-txt {
+        margin: 0;
+        padding: 0;
+    }
+
+    
+    /*footer*/
    
     footer {
         flex-direction: column;
